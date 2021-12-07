@@ -27,6 +27,12 @@ body {
     grid-area: aside;
 }
 
+.li1 div {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+
 .aside > div {
     width: 100%;
     height: 100%;
@@ -181,6 +187,16 @@ body {
     /* background-color: red; */
 }
 
+.div-button {
+    position: absolute;
+    left: 305px;
+    top: 22px;
+} 
+
+.activeToggle .div-button {
+    left: 85px;
+}   
+
 .div-button > i {
     font-size: 25px;
     color: black;
@@ -188,4 +204,30 @@ body {
 
 .div-button > i:hover {
     cursor: pointer;
+}
+
+/* Responsividade */
+
+@media (max-width: 991px) {
+    body {
+        grid-template-rows: 165px 1fr 360px;
+    }  
+}
+
+@media (max-width: 950px) {
+    .div-button {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        grid-template-rows: 175px 1fr 360px;
+    }  
+}
+
+@media (max-width: 493px) {
+    body {
+        grid-template-rows: 220px 1fr 360px;
+    }  
 }

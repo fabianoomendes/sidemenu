@@ -62,10 +62,13 @@ function tirar() {
 }
 
 document.querySelector('.li1').addEventListener("mouseenter", function () {
+    tirar2();   
     document.querySelector("#i-1").classList.add("act");
 })
 
-document.querySelector('.li1').addEventListener("mouseout", function () {
+
+
+document.querySelector('.li1').addEventListener("mouseleave", function () {
     document.querySelector("#i-1").classList.remove("act");
 })
 
@@ -78,10 +81,11 @@ document.querySelector('#i-1').addEventListener("mouseenter", function () {
 })
 
 document.querySelector('.li2').addEventListener("mouseenter", function () {
+    tirar2();
     document.querySelector("#i-2").classList.add("act");
 })
 
-document.querySelector('.li2').addEventListener("mouseout", function () {
+document.querySelector('.li2').addEventListener("mouseleave", function () {
     document.querySelector("#i-2").classList.remove("act");
 })
 
@@ -94,10 +98,11 @@ document.querySelector('#i-2').addEventListener("mouseenter", function () {
 })
 
 document.querySelector('.li3').addEventListener("mouseenter", function () {
+    tirar2();
     document.querySelector("#i-3").classList.add("act");
 })
 
-document.querySelector('.li3').addEventListener("mouseout", function () {
+document.querySelector('.li3').addEventListener("mouseleave", function () {
     document.querySelector("#i-3").classList.remove("act");
 })
 
@@ -110,10 +115,11 @@ document.querySelector('#i-3').addEventListener("mouseenter", function () {
 })
 
 document.querySelector('.li4').addEventListener("mouseenter", function () {
+    tirar2();
     document.querySelector("#i-4").classList.add("act");
 })
 
-document.querySelector('.li4').addEventListener("mouseout", function () {
+document.querySelector('.li4').addEventListener("mouseleave", function () {
     document.querySelector("#i-4").classList.remove("act");
 })
 
@@ -126,10 +132,11 @@ document.querySelector('#i-4').addEventListener("mouseenter", function () {
 })
 
 document.querySelector('.li5').addEventListener("mouseenter", function () {
+    tirar2();
     document.querySelector("#i-5").classList.add("act");
 })
 
-document.querySelector('.li5').addEventListener("mouseout", function () {
+document.querySelector('.li5').addEventListener("mouseleave", function () {
     document.querySelector("#i-5").classList.remove("act");
 })
 
@@ -142,9 +149,22 @@ document.querySelector('#i-5').addEventListener("mouseenter", function () {
 })
 
 function tirar2() {
-    document.querySelector("#i-5").classList.remove("act");
-    document.querySelector("#i-5").classList.remove("act");
-    document.querySelector("#i-5").classList.remove("act");
-    document.querySelector("#i-5").classList.remove("act");
+    document.querySelector("#i-1").classList.remove("act");
+    document.querySelector("#i-2").classList.remove("act");
+    document.querySelector("#i-3").classList.remove("act");
+    document.querySelector("#i-4").classList.remove("act");
     document.querySelector("#i-5").classList.remove("act");
 }
+
+let largura = window.innerWidth;
+
+if(largura < 950) {
+    document.body.classList.add("activeToggle");   
+}
+
+window.addEventListener("resize", function() {
+    let largura = window.innerWidth;
+    if(largura < 950) {
+        document.body.classList.add("activeToggle");   
+    }
+})
